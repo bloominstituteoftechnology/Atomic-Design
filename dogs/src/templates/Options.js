@@ -12,10 +12,10 @@ function Options(props) {
   return (
     <Card className="Options">
       <CardBody>
-        <CardTitle className="d-flex justify-content-center mb-3">
+        <CardTitle className="d-flex justify-content-center mb-3 text-capitalize">
           {props.title}
         </CardTitle>
-        <CardSubtitle className="d-flex justify-content-center">
+        <CardSubtitle className="d-flex justify-content-center text-capitalize">
           {props.subtitle || ""}
         </CardSubtitle>
       </CardBody>

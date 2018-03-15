@@ -6,8 +6,8 @@ import { ListGroupItem } from "reactstrap";
 function StyledLink(props) {
   return (
     <ListGroupItem className="Link">
-      <Link to={props.path}>
-        {props.label.charAt(0).toUpperCase() + props.label.slice(1)}
+      <Link to={props.path} className="text-capitalize">
+        {props.label}
       </Link>
     </ListGroupItem>
   );

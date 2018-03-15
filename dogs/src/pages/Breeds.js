@@ -38,7 +38,7 @@ class Breeds extends Component {
         .then(response => {
           console.log("Getting Image: ", response);
           this.setState({
-            imgLabel: this.state.breeds[0].label.toUpperCase(),
+            imgLabel: this.state.breeds[0].label,
             imgUrl: response.data.message
           });
         });

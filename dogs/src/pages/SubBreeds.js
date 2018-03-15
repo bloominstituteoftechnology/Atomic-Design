@@ -11,7 +11,7 @@ class SubBreeds extends Component {
   render() {
     return (
       <Options
-        title="Sub-breeds"
+        title="Sub-Breeds"
         subtitle={this.props.match.params.breed}
         list={this.state.subBreeds}
         imgLabel={this.state.imgLabel}

@@ -37,7 +37,7 @@ class SubBreed extends Component {
       )
       .then(response => {
         this.setState({
-          imgLabel: this.props.match.params.subbreed.toUpperCase(),
+          imgLabel: this.props.match.params.subbreed,
           imgUrl: response.data.message
         });
       });

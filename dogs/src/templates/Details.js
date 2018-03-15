@@ -6,13 +6,17 @@ function Details(props) {
   return (
     <Card className="Details">
       <CardBody>
-        <CardTitle>{props.title}</CardTitle>
-        <CardSubtitle>{props.subtitle || ""}</CardSubtitle>
+        <CardTitle className="text-capitalize d-flex justify-content-center">
+          {props.title}
+        </CardTitle>
+        <CardSubtitle className="text-capitalize d-flex justify-content-center">
+          {props.subtitle || ""}
+        </CardSubtitle>
         <Image
           className="img-fluid"
           label={props.imgLabel}
           url={props.imgUrl}
-        />{" "}
+        />
       </CardBody>
     </Card>
   );

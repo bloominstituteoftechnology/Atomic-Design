@@ -5,8 +5,8 @@ function Image(props) {
   return (
     <Card className="Image">
       <CardBody>
-        <CardTitle>{props.label || ""}</CardTitle>
-      </CardBody>{" "}
+        <CardTitle className="text-capitalize">{props.label || ""}</CardTitle>
+      </CardBody>
       <CardImg className="img-fluid rounded" src={props.url} />
     </Card>
   );
