@@ -8,6 +8,11 @@ class SubBreeds extends Component {
     imgLabel: "",
     imgUrl: ""
   }
+  render () {
+    return (<div>Hello World 2 :)</div>)
+  }
 }
+
+
 
 export default SubBreeds;
