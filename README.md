@@ -16,8 +16,8 @@ You are given the `atoms`, `molecules`, `organisms`, and `templates` needed to b
 
 * Requirements for `Breeds.js`
   * Title should be "Breeds"
-  * Show a list of dog breeds
-  * Each list item should be a link to a `SubBreed` page that shows the sub-breed details
+  * Show a list of dog breeds 
+  * Each list item should be a link to a `SubBreed` page that shows the sub-breed details 
   * Show an image of the first dog breed in the list, with that breed as a title for the image
   * use the provided method `filterBreeds` or any modification of it to limit the list (This is to make sure that the breeds we show actually have sub-breeds. Make sure you still make the initial get requests for the list of dogs first though as part of the assignment exercise)
 
