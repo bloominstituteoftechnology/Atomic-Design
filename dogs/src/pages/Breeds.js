@@ -29,30 +29,29 @@ class Breeds extends Component {
         }
         this.setState({ breeds: this.filterBreeds(this.state.breeds) });
         for (let i = 0; i < this.state.breeds.length; i++) {
+          if (i === 0) {
+            //set right column image to first breed from breeds array
+            axios
+              .get(
+                `https://dog.ceo/api/breed/${
+                  this.state.breeds[i]
+                }/images/random`
+              )
+              .then(response => {
+                this.setState({
+                  imgUrl: response.data.message,
+                  imgLabel: 'Hound'
+                });
+              })
+              .catch(error => console.log(error));
+          }
           this.state.breeds[i] = {
             label: this.state.breeds[i],
-            path: `https://dog.ceo/api/breed/${this.state.breeds[i]}/images`
+            path: `/subbreeds/${this.state.breeds[i]}`
           };
         }
-        console.log(this.state.breeds);
       })
-      .then(
-        axios
-          .get(`https://dog.ceo/api/breed/hound/images/random`)
-          .then(response => {
-            console.log(response);
-            this.setState({
-              imgUrl: response.data.message,
-              imgLabel: 'Hound'
-            });
-          })
-      )
       .catch(error => console.log(error));
-    //populate imgLabel, imgUrl:
-    //  this.setState({
-    //    imgUrl: response.data.message,
-    //    imgLabel: this.state.breeds[0]
-    //  });
   } //end ComponentDidMount
 
   render() {
