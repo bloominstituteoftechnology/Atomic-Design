@@ -15,7 +15,7 @@ class Breeds extends Component {
       // console.log('get response: ', res);
       // console.log('get.data.message response: ', res.data.message);
       // console.log('array of keys: ', Object.keys(res.data.message));
-      this.setState({ breeds: Object.keys(res.data.message) });
+      this.setState({ breeds: this.filterBreeds(Object.keys(res.data.message)) });
       // console.log('state: ', this.state)
     });
   }
@@ -38,6 +38,7 @@ class Breeds extends Component {
   render() {
     return (
       <div>
+        {/* <Options list={this.state.breeds} imgLabel='/> */}
       </div>
     )
   }
