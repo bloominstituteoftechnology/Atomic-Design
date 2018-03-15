@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Options } from "../templates";
-import { List } from "../molecules";
 
 class SubBreeds extends Component {
   state = {
@@ -12,7 +11,8 @@ class SubBreeds extends Component {
   render() {
     return (
       <Options
-        title={this.props.match.params.breed}
+        title="Sub-breeds"
+        subtitle={this.props.match.params.breed}
         list={this.state.subBreeds}
         imgLabel={this.state.imgLabel}
         imgUrl={this.state.imgUrl}
@@ -25,7 +25,10 @@ class SubBreeds extends Component {
       .then(response => {
         this.setState({
           subBreeds: response.data.message.map(breed => {
-            return { label: breed };
+            return {
+              path: `${this.props.match.params.breed}/${breed}`,
+              label: breed
+            };
           })
         });
         axios

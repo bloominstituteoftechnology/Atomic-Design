@@ -1,5 +1,4 @@
-import Options from './Options.js';
+import Options from "./Options.js";
+import Details from "./Details.js";
 
-export {
-  Options
-}
+export { Options, Details };
