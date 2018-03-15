@@ -20,6 +20,10 @@ class Breeds extends Component {
 
     return breeds.filter(breed => choiceBreeds[breed]);
   }
+
+  render() {
+    return <div><p>Hello from Breeds.js render</p></div>
+  }
 }
 
 export default Breeds;
