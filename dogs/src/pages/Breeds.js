@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Options } from '../templates';
 
+// This page imports axios for server calls. Also imports template Options.
+
+// 
 class Breeds extends Component {
   state = {
     breeds: [],
@@ -19,6 +22,14 @@ class Breeds extends Component {
     }
 
     return breeds.filter(breed => choiceBreeds[breed]);
+  }
+
+  render() {
+    return (
+      <div>
+        <Options title="Sub-breeds" subtitle="EDIT THIS breed name from breeds"/>
+        </div>
+    );
   }
 }
 
