@@ -36,31 +36,33 @@ class Breeds extends Component {
 
   componentDidMount() {
     axios.get("https://dog.ceo/api/breeds/list")
+    
     .then(response => {
       let breed = this.filterBreeds(response.data.message)
-      let newArray = []
+      let breedsArr = []
       breed.map(dog => {
-        newArray.push({
+        breedsArr.push({
           label: dog,
           path: `/subbreeds/${dog}`
         })
       })
-      this.setState({ breeds: newArray });
-      
+      this.setState({ breeds: breedsArr });
     })
+
     .then(() => {
       this.setState({imgLabel: this.state.breeds[0].label })
-      console.log(this.state.imgLabel)
+      
       axios.get(`https://dog.ceo/api/breed/${this.state.imgLabel}/images`)
       .then(response => {
         this.setState({ imgUrl:response.data.message[0] })
-        console.log(this.state)
+       
       })
     })
     .catch(err => {
       console.log('Axios request failed: ', err);
     })
   }
+
 }
 
 export default Breeds;
