@@ -12,9 +12,11 @@ class Breeds extends Component {
   getBreeds() {
     axios.get('https://dog.ceo/api/breeds/list/all')
     .then( res => {
-      console.log('get response: ', res);
-      console.log('get.data response: ', res.data);
-      this.setState({ breeds: res.data });
+      // console.log('get response: ', res);
+      // console.log('get.data.message response: ', res.data.message);
+      // console.log('array of keys: ', Object.keys(res.data.message));
+      this.setState({ breeds: Object.keys(res.data.message) });
+      // console.log('state: ', this.state)
     });
   }
 
