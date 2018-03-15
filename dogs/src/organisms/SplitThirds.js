@@ -1,6 +1,8 @@
 import React from 'react';
 import './SplitThirds.css';
 
+
+
 function SplitThirds(props) {
   return (
     <div className="SplitThirds">
