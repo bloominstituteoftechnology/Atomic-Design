@@ -11,10 +11,9 @@ class SubBreeds extends Component {
   }
 
 render() {
-  console.log(this.state.subBreeds)
   return(
     <div>
-      <Options title={`${this.props.match.params.breed} SubBreeds`} list={this.state.subBreeds.map(breed => { return {label: breed, path: `/subbreeds/${breed}`}})} />
+      <Options title="SubBreeds" imgLabel={this.state.imgLabel} imgUrl={this.state.imgUrl} subtitle={this.props.match.params.breed} list={this.state.subBreeds.map(breed => { return {label: breed, path: `/subbreeds/${this.props.match.params.breed}/${breed}`}})} />
       <Link to="/">Return Home</Link>
     </div>
   )
@@ -24,6 +23,10 @@ componentDidMount() {
   axios.get(`https://dog.ceo/api/breed/${this.props.match.params.breed}/list`)
   .then(response => {
     this.setState( { subBreeds: response.data.message });
+    this.setState({imgLabel: this.state.subBreeds[0]})
+      axios.get(`https://dog.ceo/api/breed/${this.props.match.params.breed}/${this.state.subBreeds[0]}/images/random`)
+      .then(response => this.setState({imgUrl: response.data.message}))
+      .catch(error => console.log(`You dun goofed: ${error}`))
   })
   .catch(error => console.log(`You dun goofed: ${error}`))
 }

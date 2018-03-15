@@ -4,7 +4,8 @@ import './App.css';
 
 import {
   Breeds,
-  SubBreeds
+  SubBreeds,
+  Deets,
 } from './pages';
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path='/' component={Breeds} />
-        <Route path='/subbreeds/:breed' component={SubBreeds} />
+        <Route exact path='/subbreeds/:breed' component={SubBreeds} />
+        <Route path='/subbreeds/:breed/:subbreed' component={Deets} />
       </div>
     );
   }
