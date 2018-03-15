@@ -3,11 +3,6 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import { Breeds, SubBreeds } from './pages';
 
-import {
-  Breeds,
-  SubBreeds
-} from './pages';
-
 class App extends Component {
   render() {
     return (
