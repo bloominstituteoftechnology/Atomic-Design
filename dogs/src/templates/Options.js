@@ -19,7 +19,9 @@ function Options(props) {
           {props.subtitle || ""}
         </CardSubtitle>
       </CardBody>
-      <SplitThirds left={leftComponent} right={rightComponent} />
+      <CardBody>
+        <SplitThirds left={leftComponent} right={rightComponent} />
+      </CardBody>
     </Card>
   );
 }
