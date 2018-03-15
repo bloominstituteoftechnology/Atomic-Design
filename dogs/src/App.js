@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path='/' component={Breeds} />
-        <Route path='/subbreeds/:breed' component={SubBreeds} />
+        <Route path='/subbreeds/:breed' component={SubBreeds} /> 
       </div>
     );
   }
