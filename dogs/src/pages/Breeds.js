@@ -9,6 +9,19 @@ class Breeds extends Component {
     imgUrl: ""
   }
 
+  componentDidMount() {
+    axios.get('https://dog.ceo/api/breeds/list').then(response => {
+        
+        this.setState({ breeds: response.data.message});
+      })
+      
+        .catch(error => {
+          console.log(`There was an error getting dogs:  ${error}`);
+        });
+        
+  }
+  
+
   filterBreeds(breeds) {
     const choiceBreeds = {
       hound: "hound",
@@ -20,6 +33,16 @@ class Breeds extends Component {
 
     return breeds.filter(breed => choiceBreeds[breed]);
   }
+    render(){
+      return (
+        <div>
+          <h1>Breeds</h1>
+          {/* {this.state.breeds} */}
+          <Options label={this.state.breeds} list={this.state.breeds} imgLabel={} imgUrl />
+            {/* {console.log(this.state.breeds)}   */}
+        </div>
+      )
+    }
 }
 
 export default Breeds;
