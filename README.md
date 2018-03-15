@@ -31,7 +31,16 @@ You are given the `atoms`, `molecules`, `organisms`, and `templates` needed to b
   * Dog Breed API: https://dog.ceo/dog-api/
   * Atomic Design: http://bradfrost.com/blog/post/atomic-web-design/
 
+## Stretch Problem
+Make a new template called `Details` that consumes lower level components to show detailed information. It should be able to:
+  * Show a title
+  * Show a subtitle
+  * Display an image with a title
+
+Consume this template with a new page that passes down the breed and sub-breed information to your new template. Make the listed sub-breed names link to this new page with that sub-breed's information.
+
 ## Post-assignment Resouces:
+For further consideration:
   * Component Folder Pattern: https://medium.com/styled-components/component-folder-pattern-ee42df37ec68
   * Modified Atomic Design: https://medium.com/@yejodido/atomic-components-managing-dynamic-react-components-using-atomic-design-part-1-5f07451f261f
 
