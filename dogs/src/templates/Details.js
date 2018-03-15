@@ -1,18 +1,15 @@
 import React from 'react';
-import { SplitThirds } from '../organisms';
-import { List } from '../molecules';
 import { Image } from '../atoms';
+import './Details.css';
 
-function Details(props) {
-
-  const leftComponent = (<List list={props.list} />);
-  const rightComponent = ( <Image label={props.imgLabel} url={props.imgUrl}/> );
+function Details (props) {
 
   return (
-    <div className="Options">
+    <div className="Details">
       <h1>{props.title}</h1>
       <h2>{props.subtitle || ""}</h2>
-      <SplitThirds left={leftComponent} right={rightComponent} />
+      <Image label={props.imgLabel} url={props.imgUrl}/>
+      <button onClick={props.newimg}>MORE DOGS MORE MORE</button>
     </div>
   );
 }
