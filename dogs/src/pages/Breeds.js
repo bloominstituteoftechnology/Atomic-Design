@@ -21,9 +21,6 @@ class Breeds extends Component {
     })
     .then(breeds => this.filterBreeds(breeds))
     .then(filteredBreeds => {
-      // this.setState({
-      //   breeds: filteredBreeds
-      // });
       return filteredBreeds;
     })
     .then(filteredBreeds => this.getFirstImg(filteredBreeds))
@@ -43,7 +40,7 @@ class Breeds extends Component {
         imgUrl: response.data.message
       });
     })}
-  
+
   filterBreeds(breeds) {
     const choiceBreeds = {
       hound: "hound",
