@@ -3,23 +3,33 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 
 import { Breeds, SubBreeds, SubBreed } from "./pages";
-import { Button, Container } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 
 class App extends Component {
   render() {
+    document.body.style.background = "rgb(119, 183, 176)";
     return (
-      <Container className="App mt-5">
+      <Container className="App my-5">
         <Route exact path="/" component={Breeds} />
         <Route exact path="/subbreeds/:breed" component={SubBreeds} />
         <Route path="/subbreeds/:breed/:subbreed" component={SubBreed} />
 
-        <Link to="/">
-          <Button className="m-3 navButtons">Home</Button>
-        </Link>
+        <Row className="mt-3">
+          <Col sm={6} className=" mt-1">
+            <Link to="/" className="m-0 p-0 navButtons">
+              <Button className="navButtons">Home</Button>
+            </Link>
+          </Col>
 
-        <Button className="navButtons" onClick={this.props.history.goBack}>
-          Back
-        </Button>
+          <Col sm={6} className="mt-1">
+            <Button
+              className="m-0 navButtons "
+              onClick={this.props.history.goBack}
+            >
+              Back
+            </Button>
+          </Col>
+        </Row>
       </Container>
     );
   }
