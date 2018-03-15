@@ -9,6 +9,19 @@ class Breeds extends Component {
     imgUrl: ""
   }
 
+  getBreeds() {
+    axios.get('https://dog.ceo/api/breeds/list/all')
+    .then( res => {
+      console.log('get response: ', res);
+      console.log('get.data response: ', res.data);
+      this.setState({ breeds: res.data });
+    });
+  }
+
+  componentDidMount() {
+    this.getBreeds();
+  }
+
   filterBreeds(breeds) {
     const choiceBreeds = {
       hound: "hound",
@@ -26,7 +39,6 @@ class Breeds extends Component {
       </div>
     )
   }
-
 }
 
 export default Breeds;
