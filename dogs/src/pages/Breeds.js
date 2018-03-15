@@ -37,12 +37,19 @@ class Breeds extends Component {
   componentDidMount() {
     axios.get("https://dog.ceo/api/breeds/list")
     .then(response => {
-      // console.log(response);
-      this.setState({ breeds: this.filterBreeds(response.data.message) });
-      // console.log(this.state.breeds)
+      let breed = this.filterBreeds(response.data.message)
+      let newArray = []
+      breed.map(dog => {
+        newArray.push({
+          label: dog,
+          path: `/subbreeds/${dog}`
+        })
+      })
+      this.setState({ breeds: newArray });
+      
     })
     .then(() => {
-      this.setState({imgLabel: this.state.breeds[0] })
+      this.setState({imgLabel: this.state.breeds[0].label })
       console.log(this.state.imgLabel)
       axios.get(`https://dog.ceo/api/breed/${this.state.imgLabel}/images`)
       .then(response => {
