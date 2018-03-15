@@ -20,6 +20,22 @@ class Breeds extends Component {
 
     return breeds.filter(breed => choiceBreeds[breed]);
   }
+
+  render() {
+    return(
+      <div>
+       <Options title="Breeds" list={this.state.breeds.map(breed => { return {label: breed, path: `/subbreeds/${breed}`}})} />
+      </div>
+    )
+  };
+
+  componentDidMount() {
+    axios.get('https://dog.ceo/api/breeds/list')
+    .then(response => {
+      this.setState( { breeds: this.filterBreeds(response.data.message) });
+    })
+    .catch(error => console.log(`You dun goofed: ${error}`))
+  }
 }
 
 export default Breeds;
