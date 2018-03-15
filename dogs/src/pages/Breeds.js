@@ -21,7 +21,7 @@ class Breeds extends Component {
   }
   componentDidMount() {
     axios.get("https://dog.ceo/api/breeds/list/all").then(response => {
-      console.log(response);
+      console.log("Get Breed List: ", response);
       this.setState({
         breeds: this.filterBreeds(Object.keys(response.data.message)).map(
           breed => {

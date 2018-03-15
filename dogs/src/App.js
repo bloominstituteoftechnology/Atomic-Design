@@ -12,10 +12,14 @@ class App extends Component {
         <Route exact path="/" component={Breeds} />
         <Route exact path="/subbreeds/:breed" component={SubBreeds} />
         <Route path="/subbreeds/:breed/:subbreed" component={SubBreed} />
+
         <Link to="/">
-          <Button className="m-3">Home</Button>
+          <Button className="m-3 navButtons">Home</Button>
         </Link>
-        <Button onClick={this.props.history.goBack}>Back</Button>
+
+        <Button className="navButtons" onClick={this.props.history.goBack}>
+          Back
+        </Button>
       </Container>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Details } from "../templates";
-import { Button } from "reactstrap";
+import { Button, Row } from "reactstrap";
 class SubBreed extends Component {
   constructor() {
     super();
@@ -22,9 +22,11 @@ class SubBreed extends Component {
           imgLabel={this.state.imgLabel}
           imgUrl={this.state.imgUrl}
         />
-        <Button className="mt-3" onClick={this.getPicture}>
-          Get A New Picture
-        </Button>
+        <Row className="d-flex justify-content-center">
+          <Button className="mt-3 navButtons" onClick={this.getPicture}>
+            Get A New Picture
+          </Button>
+        </Row>
       </div>
     );
   }

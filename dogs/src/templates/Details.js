@@ -9,7 +9,7 @@ function Details(props) {
         <CardTitle className="text-capitalize d-flex justify-content-center">
           {props.title}
         </CardTitle>
-        <CardSubtitle className="text-capitalize d-flex justify-content-center">
+        <CardSubtitle className="text-capitalize d-flex justify-content-center mb-3">
           {props.subtitle || ""}
         </CardSubtitle>
         <Image
