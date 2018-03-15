@@ -17,9 +17,16 @@ class Breeds extends Component {
       poodle: "poodle",
       setter: "setter"
     }
-
     return breeds.filter(breed => choiceBreeds[breed]);
   }
+
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
+
 }
 
 export default Breeds;
