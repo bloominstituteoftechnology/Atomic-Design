@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 
 import createBrowserHistory from "history/createBrowserHistory";
+import "bootstrap/dist/css/bootstrap.css";
 
 const customHistory = createBrowserHistory();
 

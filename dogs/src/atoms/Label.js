@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import { ListGroupItem } from "reactstrap";
 
 function Label(props) {
-  return <h3>{props.label}</h3>
+  return <ListGroupItem>{props.label.charAt(0).toUpperCase()}</ListGroupItem>;
 }
 
 export default Label;

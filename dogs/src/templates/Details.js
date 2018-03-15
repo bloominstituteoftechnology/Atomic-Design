@@ -1,13 +1,20 @@
 import React from "react";
 import { Image } from "../atoms";
+import { Card, CardTitle, CardSubtitle, CardBody } from "reactstrap";
 
 function Details(props) {
   return (
-    <div className="Details">
-      <h1>{props.title}</h1>
-      <h2>{props.subtitle || ""}</h2>
-      <Image label={props.imgLabel} url={props.imgUrl} />{" "}
-    </div>
+    <Card className="Details">
+      <CardBody>
+        <CardTitle>{props.title}</CardTitle>
+        <CardSubtitle>{props.subtitle || ""}</CardSubtitle>
+        <Image
+          className="img-fluid"
+          label={props.imgLabel}
+          url={props.imgUrl}
+        />{" "}
+      </CardBody>
+    </Card>
   );
 }
 

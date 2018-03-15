@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Label } from "../atoms";
+import { ListGroup } from "reactstrap";
 
 function List(props) {
   console.log("List Props: ", props);
@@ -12,7 +13,7 @@ function List(props) {
     return itemComponent;
   });
 
-  return <div className="List">{items}</div>;
+  return <ListGroup className="List">{items}</ListGroup>;
 }
 
 export default List;

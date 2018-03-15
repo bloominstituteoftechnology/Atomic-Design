@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Options } from "../templates";
-import { Link } from "../atoms";
 
 class Breeds extends Component {
   state = {
@@ -39,7 +38,7 @@ class Breeds extends Component {
         .then(response => {
           console.log("Getting Image: ", response);
           this.setState({
-            imgLabel: this.state.breeds[0].label,
+            imgLabel: this.state.breeds[0].label.toUpperCase(),
             imgUrl: response.data.message
           });
         });

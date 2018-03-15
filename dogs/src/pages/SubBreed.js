@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Details } from "../templates";
-
+import { Button } from "reactstrap";
 class SubBreed extends Component {
   constructor() {
     super();
@@ -22,7 +22,9 @@ class SubBreed extends Component {
           imgLabel={this.state.imgLabel}
           imgUrl={this.state.imgUrl}
         />
-        <button onClick={this.getPicture}>Get A New Picture</button>
+        <Button className="mt-3" onClick={this.getPicture}>
+          Get A New Picture
+        </Button>
       </div>
     );
   }
@@ -35,7 +37,7 @@ class SubBreed extends Component {
       )
       .then(response => {
         this.setState({
-          imgLabel: this.props.match.params.subbreed,
+          imgLabel: this.props.match.params.subbreed.toUpperCase(),
           imgUrl: response.data.message
         });
       });
