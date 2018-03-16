@@ -5,6 +5,8 @@ import {
 } from '../atoms';
 
 function List(props) {
+
+  console.log(props.list)
   const items = props.list.map(item => {
     const itemComponent = item.path ?
       <Link path={item.path} label={item.label} key={item.label} /> :

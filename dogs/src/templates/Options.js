@@ -4,7 +4,7 @@ import { List } from '../molecules';
 import { Image } from '../atoms';
 
 function Options(props) {
-
+  console.log(`this is props.list ${props.list}`);
   const leftComponent = ( <List list={props.list} /> );
   const rightComponent = ( <Image label={props.imgLabel} url={props.imgUrl}/> );
 
