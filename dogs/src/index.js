@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const customHistory = createHashHistory();
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <App history={customHistory} />
   </Router>,
   document.getElementById("root")
