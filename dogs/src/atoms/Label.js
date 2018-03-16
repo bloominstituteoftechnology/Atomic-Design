@@ -1,7 +1,10 @@
-import React from 'react';
+import React from "react";
+import { ListGroupItem } from "reactstrap";
 
 function Label(props) {
-  return <h3>{props.label}</h3>
+  return (
+    <ListGroupItem className="text-capitalize">{props.label}</ListGroupItem>
+  );
 }
 
 export default Label;

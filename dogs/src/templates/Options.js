@@ -1,19 +1,28 @@
-import React from 'react';
-import { SplitThirds } from '../organisms';
-import { List } from '../molecules';
-import { Image } from '../atoms';
+import React from "react";
+import { SplitThirds } from "../organisms";
+import { List } from "../molecules";
+import { Image } from "../atoms";
+
+import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 function Options(props) {
-
-  const leftComponent = ( <List list={props.list} /> );
-  const rightComponent = ( <Image label={props.imgLabel} url={props.imgUrl}/> );
+  const leftComponent = <List list={props.list} />;
+  const rightComponent = <Image label={props.imgLabel} url={props.imgUrl} />;
 
   return (
-    <div className="Options">
-      <h1>{props.title}</h1>
-      <h2>{props.subtitle || ""}</h2>
-      <SplitThirds left={leftComponent} right={rightComponent} />
-    </div>
+    <Card className="Options">
+      <CardBody>
+        <CardTitle className="d-flex justify-content-center mb-3 text-capitalize">
+          {props.title}
+        </CardTitle>
+        <CardSubtitle className="d-flex justify-content-center text-capitalize">
+          {props.subtitle || ""}
+        </CardSubtitle>
+      </CardBody>
+      <CardBody>
+        <SplitThirds left={leftComponent} right={rightComponent} />
+      </CardBody>
+    </Card>
   );
 }
 
