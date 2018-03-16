@@ -12,11 +12,11 @@ class App extends Component {
       <Container className="App my-5">
         <Route exact path="/" component={Breeds} />
         <Route exact path="/subbreeds/:breed" component={SubBreeds} />
-        <Route path="/subbreeds/:breed/:subbreed" component={SubBreed} />
+        <Route exact path="/subbreeds/:breed/:subbreed" component={SubBreed} />
 
         <Row className="mt-3">
           <Col sm={6} className=" mt-1">
-            <Link to="/" className="m-0 p-0 navButtons">
+            <Link exact to="/" className="m-0 p-0 navButtons">
               <Button className="navButtons">Home</Button>
             </Link>
           </Col>

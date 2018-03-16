@@ -4,10 +4,10 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
-import createBrowserHistory from "history/createBrowserHistory";
+import createHashHistory from "history/createHashHistory";
 import "bootstrap/dist/css/bootstrap.css";
 
-const customHistory = createBrowserHistory();
+const customHistory = createHashHistory();
 
 ReactDOM.render(
   <Router>
