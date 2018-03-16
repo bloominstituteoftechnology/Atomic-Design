@@ -17,6 +17,7 @@ function List(props) {
       {items}
     </div>
   );
+  return <div className="List">{items}</div>
 }
 
 export default List;
