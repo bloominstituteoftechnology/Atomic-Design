@@ -12,7 +12,7 @@ function Options(props) {
     <div className="Options">
       <h1>{props.title}</h1>
       <h2>{props.subtitle || ""}</h2>
-      <SplitThirds left={leftComponent} right={rightComponent} />
+      <SplitThirds left={leftComponent} right = {rightComponent} />
     </div>
   );
 }
