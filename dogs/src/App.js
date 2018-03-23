@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
 
-import { Breeds, SubBreeds, SubBreed } from './pages';
+import { Breeds } from './pages/Breeds';
+import { SubBreed } from './pages/SubBreed';
+import { SubBreeds } from './pages/SubBreeds';
 import { Button, Container, Row, Col } from 'reactstrap';
 
 class App extends Component {

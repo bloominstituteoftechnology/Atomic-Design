@@ -17,7 +17,7 @@ class Breeds extends Component {
       hound: "hound"
     };
 
-    return breeds.filter(breed => choiceBreeds[breed]_;)
+    return breeds.filter(breed => choiceBreeds[breed])
   }
   componentDidMount() {
     axios.get("https://dog.ceo/api/breeds/list/all").then(response => {

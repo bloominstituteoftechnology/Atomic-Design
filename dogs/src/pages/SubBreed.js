@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import axios from 'axios';
 import { Details } from '../templates';
-
+import { Button, Row } from 'reactstrap';
 class SubBreed extends Component {
     constructor() {
         super();
@@ -10,7 +10,7 @@ class SubBreed extends Component {
             imgLabel: "",
             imgUrl: ""
         };
-        this.getPicture = this.getPicture.bind{this};
+        this.getPicture = this.getPicture.bind(this);
     }
     render() {
         return (
