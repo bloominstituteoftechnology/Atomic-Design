@@ -1,11 +1,14 @@
 import React from 'react';
+import { CardImg, Card, CardTitle, CardBody } from 'reactstrap';
 
 function Image(props) {
   return (
-    <div className="Image">
-      <h2>{props.label || ""}</h2>
-      <img src={props.url}/>
-    </div>
+    <Card className="Image">
+        <CardBody>
+          <CardTitle className="text-capitalize">{props.label || ""}</CardTitle>
+        </CardBody>
+        <CardImg className="img-fluid rounded" src={props.url} />
+    </Card>
   );
 }
 
