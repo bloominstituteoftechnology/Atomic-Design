@@ -44,3 +44,4 @@ For further consideration:
   * Component Folder Pattern: https://medium.com/styled-components/component-folder-pattern-ee42df37ec68
   * Modified Atomic Design: https://medium.com/@yejodido/atomic-components-managing-dynamic-react-components-using-atomic-design-part-1-5f07451f261f
 
+.
