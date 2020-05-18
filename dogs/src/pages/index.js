@@ -1,7 +1,5 @@
-import Breeds from './Breeds.js';
-import SubBreeds from './SubBreeds.js';
+import Breeds from './Breeds';
+import SubBreeds from './SubBreeds';
+import SubBreed from './SubBreed';
 
-export {
-  Breeds,
-  SubBreeds
-}
+export { Breeds, SubBreeds, SubBreed };
